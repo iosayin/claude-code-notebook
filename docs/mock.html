@@ -1,0 +1,29 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>claude-code-notebook mock</title>
+<!-- Mock terminal for the README demo. All names, paths and content are fictional. -->
+<style>
+body{margin:0;background:#0d1117;font:13px/1.55 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:#c9d1d9}
+.w{width:720px;box-sizing:border-box;padding:0 0 14px}
+.bar{background:#161b22;padding:9px 12px;display:flex;gap:7px;align-items:center;border-bottom:1px solid #21262d}
+.d{width:11px;height:11px;border-radius:50%}.t{color:#8b949e;margin-left:8px;font-size:12px}
+pre{margin:0;padding:12px 16px;white-space:pre-wrap}
+.g{color:#7ee787}.y{color:#e3b341}.b{color:#79c0ff}.m{color:#8b949e}.o{color:#d2a8ff}.u{color:#f0f6fc;font-weight:600}
+.box{display:block;border:1px solid #30363d;border-radius:6px;padding:6px 10px;margin:4px 0 6px;color:#c9d1d9;background:#11161d}
+</style></head><body><div class="w">
+<div class="bar"><span class="d" style="background:#ff5f57"></span><span class="d" style="background:#febc2e"></span><span class="d" style="background:#28c840"></span><span class="t">~/code/shop — claude</span></div>
+<pre><span data-s="1"><span class="u">&gt; move checkout to payments v2, don't touch refunds, staging first</span>
+<span class="m">  … 2 hours, 41 files read, 63 tool calls …</span>
+</span><span data-s="2"><span class="o">● Notebook updated</span> <span class="m">~/.claude/notebooks/code-shop/3f9c2a1b.md</span>  <span class="m">(Done: client on v2)</span>
+</span><span data-s="3">
+<span class="y">✻ Context is full. Compacting conversation…</span>
+<span class="m">  PreCompact hook: saved last 8 requests, 6 edited files, last reply</span>
+</span><span data-s="4"><span class="g">  SessionStart:compact hook: restored notebook 3f9c2a1b.md (1.9k chars)</span>
+</span><span data-s="5">
+<span class="u">&gt; ok, continue</span>
+</span><span data-s="6"><span class="b">● Picking up from the notebook:</span><span class="box"><span class="m">Next</span>       webhook signature check (v2 sends <span class="g">Payments-Signature</span>, not X-Sig)
+<span class="m">Decision</span>   keep the v1 client behind <span class="g">CHECKOUT_V2</span> until staging ran a week
+<span class="m">Gotcha</span>     sandbox rejects amounts under 0.50, use 1.00 in fixtures
+<span class="m">Off-limits</span> src/refunds/** (your words: "don't touch refunds")</span></span><span data-s="7"><span class="b">● Update</span>(src/checkout/webhooks.ts)  <span class="g">+18</span> <span class="m">-4</span>
+<span class="b">● Bash</span>(npm run test:checkout -- --grep v2)  <span class="g">✓ 24 passed</span>
+</span><span data-s="8"><span class="o">● Notebook updated</span>  <span class="m">(Done: webhook signature · Next: deploy to staging)</span>
+</span></pre></div>
+<script>const st=+(new URLSearchParams(location.search).get("step")||99);document.querySelectorAll("[data-s]").forEach(e=>{if(+e.dataset.s>st)e.style.visibility="hidden"});</script></body></html>

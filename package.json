@@ -1,0 +1,42 @@
+{
+  "name": "claude-code-notebook",
+  "version": "0.1.0",
+  "description": "Claude Code forgets what it was doing after context compaction. This keeps a per-session working notebook and restores it automatically. Two hooks, zero dependencies.",
+  "type": "module",
+  "bin": {
+    "claude-code-notebook": "src/cli.mjs"
+  },
+  "main": "src/notebook.mjs",
+  "scripts": {
+    "test": "node --test test/*.test.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "claude-code",
+    "claude",
+    "anthropic",
+    "hooks",
+    "context",
+    "compaction",
+    "memory",
+    "ai-agents",
+    "developer-tools"
+  ],
+  "license": "MIT",
+  "author": "iosayin",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iosayin/claude-code-notebook.git"
+  },
+  "homepage": "https://github.com/iosayin/claude-code-notebook#readme",
+  "bugs": {
+    "url": "https://github.com/iosayin/claude-code-notebook/issues"
+  },
+  "files": [
+    "src/",
+    "README.md",
+    "LICENSE"
+  ]
+}
